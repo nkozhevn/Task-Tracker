@@ -11,6 +11,7 @@ namespace Task_Tracker.Models
     public class Task
     {
         // Task information
+        public static int id = 0;
         public int Id { get; set; }
         public string Name { get; set; }
         public string Project { get; set; }
@@ -21,6 +22,7 @@ namespace Task_Tracker.Models
         // Class Task constructor
         public Task(string name, string project, TaskStatuses status, string description, int priority)
         {
+            Id = id++;
             Name = name;
             Project = project;
             Status = status;

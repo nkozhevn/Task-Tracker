@@ -8,6 +8,7 @@ namespace Task_Tracker.Models
     public class Project
     {
         // Project information
+        public static int id = 0;
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime OpeningDate { get; set; }
@@ -19,6 +20,7 @@ namespace Task_Tracker.Models
         // Class Project constructor
         public Project(string name, DateTime closingdate, ProjectStatuses status, string description, int priority)
         {
+            Id = id++;
             Name = name;
             OpeningDate = DateTime.Today;
             ClosingDate = closingdate;

@@ -18,9 +18,10 @@ namespace Task_Tracker
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            string con = "Server=(localdb)\\mssqllocaldb;Database=usersdbstore;Trusted_Connection=True;";
+            //DB string con = "Server=(localdb)\\mssqllocaldb;Database=usersdbstore;Trusted_Connection=True;";
 
-            services.AddDbContext<DataContext>(options => options.UseSqlServer(con)); // Adding database
+            
+            //DB services.AddDbContext<DataContext>(options => options.UseSqlServer(con)); // Adding database
 
             services.AddControllers();
         }
